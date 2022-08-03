@@ -6,6 +6,7 @@ import type { Plugin } from "vite";
 
 export default ({
   extensions = ["png", "jpg"],
+  logger = false,
 }: VitePluginWebpGenerator): Plugin => {
   return {
     name: "vite-plugin-webp-generator",
@@ -18,6 +19,7 @@ export default ({
         src(id)
           .pipe(GWebP())
           .pipe(dest(dirname(id)));
+        logger && console.info(`Generate ${id.replace(extname(id), "webp")}`)
       }
     },
   };

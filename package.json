@@ -1,6 +1,5 @@
 {
   "name": "vite-plugin-webp-generator",
-  "type": "module",
   "version": "0.0.2",
   "description": "WEBP image generator for Vite.js apps.",
   "author": "Anas Boudih <metanas@pre-history.com>",
@@ -21,22 +20,16 @@
     "vitejs"
   ],
   "main": "dist/index.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    }
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "rm -rf dist && tsc"
   },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cwebp": "^4.0.2"
+
+  },
   "devDependencies": {
     "@types/gulp": "^4.0.9",
-    "gulp": "^4.0.2",
-    "gulp-cwebp": "^4.0.2",
     "typescript": "^4.7.4",
     "vite": "^3.0.4"
   }
