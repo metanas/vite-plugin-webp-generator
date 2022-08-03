@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2020",
+    "lib": ["ESNext", "DOM"],
+    "esModuleInterop": true,
+    "declaration": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "isolatedModules": true,
+    "declarationDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true
+  },
+  "exclude": [
+    "**/dist",
+    "**/node_modules"
+  ]
+}
