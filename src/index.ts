@@ -14,12 +14,12 @@ export default ({
     transform: async (code: string, id: string) => {
       if (
         new RegExp(`.(${extensions.join("|")})$`).test(id) &&
-        !existsSync(id.replace(extname(id), "webp"))
+        !existsSync(id.replace(extname(id), ".webp"))
       ) {
         src(id)
           .pipe(GWebP())
           .pipe(dest(dirname(id)));
-        logger && console.info(`Generate ${id.replace(extname(id), "webp")}`)
+        logger && console.info(`Generate ${id.replace(extname(id), ".webp")}`)
       }
     },
   };
