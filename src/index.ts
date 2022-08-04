@@ -14,6 +14,7 @@ export default ({
     transform: async (code: string, id: string) => {
       if (
         new RegExp(`.(${extensions.join("|")})$`).test(id) &&
+        !/[\\/]node_modules[\\/]/ &&
         !existsSync(id.replace(extname(id), ".webp"))
       ) {
         src(id)
