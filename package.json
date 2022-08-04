@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-webp-generator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "WEBP image generator for Vite.js apps.",
   "author": "Anas Boudih <metanas@pre-history.com>",
   "license": "MIT",
